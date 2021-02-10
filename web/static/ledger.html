@@ -12,8 +12,8 @@
 		</div>
 
 		<div class="btns">
-			<button onclick="myFunction()">Login</button>
-			<button onclick="myFunction()">Register</button>
+			<button id="register" value="true" onclick="registerFunction()">Register</button>
+			<!-- <button onclick="regFunction()">Register</button> -->
 		</div>
 
 	</div>
@@ -71,7 +71,7 @@
 			margin: 0;
 			position: absolute;
 			top: 80%;
-			left: 70%;
+			left: 80%;
 			-ms-transform: translate(-50%, -50%);
 			transform: translate(-50%, -50%);
 		}
@@ -81,14 +81,37 @@
 			object-fit: Fill;
 		}
 	</style>
-	<!-- Script snippet found at: https://www.w3schools.com/jsref/event_onclick.asp -->
-	<p id="demo"></p>
+
+	<!-- Div/script snippet found at: 
+		https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/04.1.html -->
+
+	<div id="forms" style="display: none">
+		<form action="/welcome" method="post"><br /><br />
+			<label>Email Address:</label><br />
+			<input type="email" name="email"><br /><br />
+			<label>User Name:</label><br />
+			<input type="name" name="name"><br /><br />
+			<label>Password:</label><br />
+			<input type="password" name="password">
+			<input type="submit" value="Submit">
+		</form>
+	</div>
 
 	<script>
-		function myFunction() {
-			document.getElementById("demo").innerHTML = "********* Do stuff on button clicks... *********";
+
+		function registerFunction() {
+			var x = document.getElementById("forms");
+			if (register.value == "true") {
+				x.style.display = "block";
+
+			}
 		}
+		function regFunction() {
+			document.getElementById("register").innerHTML = "Register new user details...";
+		}
+
 	</script>
+
 
 </body>
 
