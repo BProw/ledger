@@ -1,2 +1,3 @@
 # Ignore Mac sys files
 .DS_store
+web/static/.DS_store
